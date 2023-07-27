@@ -1,0 +1,9 @@
+<h2>{{project.title}}</h2>
+<p>{{project.summary}}</p>
+<p>{{project.role}}</p>
+<ul *ngIf="project.references">
+	<li *ngFor="let line of project.references">
+		<a *ngIf="line.link; else noLink" href={{line.link}}>{{line.text}}</a>
+		<ng-template #noLink>{{line.text}}</ng-template>
+	</li>
+</ul>
