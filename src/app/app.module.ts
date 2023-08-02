@@ -5,9 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppComponent } from './app.component';
-import { ProjectEntryComponent } from './project-entry/project-entry.component';
+import { ProjectEntryComponent } from './components/project-entry/project-entry.component';
 import { ProjectDataMemoryStoreService } from './services/project-data-memory-store.service';
-import { ProjectListComponent } from './project-list/project-list.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 
 @NgModule({
   declarations: [

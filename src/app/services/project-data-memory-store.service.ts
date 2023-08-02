@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Project } from '../interface/project';
+import { Project } from '../interfaces/project';
 
 
 const projectList: Project[] = [
