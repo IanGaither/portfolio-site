@@ -4,13 +4,13 @@
 <ul *ngIf="project.downloads">
 	<p>Available for download via:</p>
 	<li *ngFor="let line of project.downloads">
-		<a href={{line.link}} target="_blank" rel="noopener noreferrer">{{line.text}} (External Site)</a>
+		<app-link [textLink]="line"></app-link>
 	</li>
 </ul>
 <ul *ngIf="project.references">
 	<li *ngFor="let reference of project.references">
 		<p>
-			{{reference.description}} <a href={{reference.textLink.link}} target="_blank" rel="noopener noreferrer">{{reference.textLink.text}} (External Site)</a>
+			{{reference.description}} <app-link [textLink]="reference.textLink"></app-link>
 		</p>
 	</li>
 </ul>

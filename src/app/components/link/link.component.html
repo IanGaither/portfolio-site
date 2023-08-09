@@ -1,0 +1,8 @@
+<span>
+	<a *ngIf="textLink.externalLink; else noExternal" href={{textLink.link}} target="_blank" rel="noopener noreferrer">
+		{{textLink.text}} <i class="bi-box-arrow-up-right"></i>
+	</a>
+	<ng-template #noExternal>
+		<a href={{textLink.link}}>{{textLink.text}}</a>
+	</ng-template>
+</span>

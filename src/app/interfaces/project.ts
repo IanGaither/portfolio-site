@@ -1,11 +1,9 @@
+import { TextLink } from "./text-link";
+
+
 export enum MediaType {
 	Video,
 	Image
-}
-
-export interface TextLink {
-	text: string;
-	link: string;
 }
 
 export interface Project {
