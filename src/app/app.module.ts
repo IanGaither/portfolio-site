@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { ProjectEntryComponent } from './components/project-entry/project-entry.component';
@@ -23,7 +24,8 @@ import { LinkComponent } from './components/link/link.component';
 	HttpClientModule,
 	HttpClientInMemoryWebApiModule.forRoot(
 		ProjectDataMemoryStoreService, { dataEncapsulation: false }
-	)
+	),
+	NgbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
