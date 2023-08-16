@@ -1,10 +1,6 @@
 import { TextLink } from "./text-link";
+import { MediaItem } from "./media-item";
 
-
-export enum MediaType {
-	Video,
-	Image
-}
 
 export interface Project {
 	title: string;
@@ -12,5 +8,5 @@ export interface Project {
 	role: string;
 	downloads?: TextLink[];
 	references?: {description: string, textLink: TextLink}[];
-	media?: {filename: string, type: MediaType}[];
+	media?: MediaItem[];
 };

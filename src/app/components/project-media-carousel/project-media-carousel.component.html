@@ -1,0 +1,28 @@
+<div *ngIf="carouselItems.length == 1; else carousel">
+	<div *ngIf="carouselItems[0].mediaType == MediaType.Video; else image" class="carousel-video-wrapper">
+		<video #video controls class="d-block w-100">
+			<source src={{carouselItems[0].sourceFilename}} type="video/mp4">
+		</video>
+	</div>
+	<ng-template #image>
+		<div class="carousel-img-wrapper">
+			<img src={{carouselItems[0].sourceFilename}} class="d-block w-100">
+		</div>
+	</ng-template>
+</div>
+<ng-template #carousel>
+	<ngb-carousel (slide)="slideChange($event)" [interval]="0">
+		<ng-template *ngFor="let item of carouselItems" ngbSlide>
+			<div *ngIf="item.mediaType == MediaType.Video; else image" class="carousel-video-wrapper">
+				<video #video controls class="d-block w-100">
+					<source src={{item.sourceFilename}} type="video/mp4">
+				</video>
+			</div>
+			<ng-template #image>
+				<div class="carousel-img-wrapper">
+					<img src={{item.sourceFilename}} class="d-block w-100">
+				</div>
+			</ng-template>
+		</ng-template>
+	</ngb-carousel>
+</ng-template>

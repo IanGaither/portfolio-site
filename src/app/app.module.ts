@@ -10,6 +10,7 @@ import { ProjectEntryComponent } from './components/project-entry/project-entry.
 import { ProjectDataMemoryStoreService } from './services/project-data-memory-store.service';
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { LinkComponent } from './components/link/link.component';
+import { ProjectMediaCarouselComponent } from './components/project-media-carousel/project-media-carousel.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { LinkComponent } from './components/link/link.component';
     ProjectEntryComponent,
     ProjectListComponent,
     LinkComponent,
+    ProjectMediaCarouselComponent,
   ],
   imports: [
     BrowserModule,

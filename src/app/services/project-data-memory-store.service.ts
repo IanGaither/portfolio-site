@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Project } from '../interfaces/project';
+import { MediaType } from '../interfaces/media-item';
 
 
 const projectList: Project[] = [
@@ -19,6 +20,16 @@ const projectList: Project[] = [
 				link: 'https://games.digipen.edu/games/lirica',
 				externalLink: true
 			}
+		],
+		media: [
+			{
+				sourceFilename: "assets/videos/Lirica_trailer.mp4",
+				mediaType: MediaType.Video
+			},
+			{
+				sourceFilename: "assets/images/Lirica_screenshot.jpg",
+				mediaType: MediaType.Image
+			}
 		]
 	},
 	{
@@ -30,6 +41,16 @@ const projectList: Project[] = [
 				text: 'DigiPen Institute of Technology',
 				link: 'https://games.digipen.edu/games/ascent',
 				externalLink: true
+			}
+		],
+		media: [
+			{
+				sourceFilename: "assets/videos/Ascent_trailer.mp4",
+				mediaType: MediaType.Video
+			},
+			{
+				sourceFilename: "assets/images/Ascent_screenshot.png",
+				mediaType: MediaType.Image
 			}
 		]
 	},
@@ -45,7 +66,13 @@ const projectList: Project[] = [
 				link: 'https://blogs.oregonstate.edu/iangaither/2021/11/19/developing-randomness-in-our-game-dynamic-scaling-and-relative-probability/',
 				externalLink: true
 			}
-		}]
+		}],
+		media: [
+			{
+				sourceFilename: "assets/images/TD_Squared_icon.png",
+				mediaType: MediaType.Image
+			}
+		]
 	}
 ]
 
