@@ -1,28 +1,33 @@
 <div class="container">
-	<h2>{{project.title}}</h2>
-	<app-project-media-carousel *ngIf="project.media" 
-		[carouselId]="project.title"
-		[carouselItems]="project.media">
-	</app-project-media-carousel>
-	<div class="row">
-		<div class="col">
-			<p>{{project.summary}}</p>
+	<div class="row align-items-center">
+		<h1 class="d-xl-none text-center">{{project.title}}</h1>
+		<div class="col-xl-6">
+			<app-project-media-carousel *ngIf="project.media" 
+				[carouselId]="project.title"
+				[carouselItems]="project.media">
+			</app-project-media-carousel>
 		</div>
-		<div class="col">
+		<div class="col-xl-6">
+			<h2 class="d-none d-xl-block">{{project.title}}</h2>
+			<p class="pt-3 pt-xl-0">{{project.summary}}</p>
 			<p>{{project.role}}</p>
+			<div class="text-center" *ngIf="project.downloads">
+				<p style="margin-bottom: 0">Available for download via:</p>
+				<ul>
+					<li *ngFor="let line of project.downloads">
+						<app-link [textLink]="line"></app-link>
+					</li>
+				</ul>
+			</div>
+			<div *ngIf="project.references">
+				<ul>
+					<li *ngFor="let reference of project.references">
+						<p>
+							{{reference.description}} <app-link [textLink]="reference.textLink"></app-link>
+						</p>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-	<ul *ngIf="project.downloads">
-		<p>Available for download via:</p>
-		<li *ngFor="let line of project.downloads">
-			<app-link [textLink]="line"></app-link>
-		</li>
-	</ul>
-	<ul *ngIf="project.references">
-		<li *ngFor="let reference of project.references">
-			<p>
-				{{reference.description}} <app-link [textLink]="reference.textLink"></app-link>
-			</p>
-		</li>
-	</ul>
 </div>
