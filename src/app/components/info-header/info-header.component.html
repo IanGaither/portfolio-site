@@ -1,0 +1,21 @@
+<h1 class="text-center">Ian Gaither</h1>
+<div class="row align-items-center text-center">
+	<div class="col-0 col-xl-2"></div>
+	<div class="col-6 col-xl-8">
+		<p style="margin-bottom: 0">Contact:</p>
+		<ul>
+			<li><app-link [textLink]="mailtoLink"></app-link></li>
+			<li><app-link [textLink]="linkedinLink"></app-link></li>
+		</ul>
+	</div>
+	<div class="col-6 col-xl-2">
+		<p>This site was built with Angular 16 and Bootstrap 5. The source is available via <app-link [textLink]="projectRepoLink"></app-link></p>
+	</div>
+</div>
+<hr/>
+<div class="row justify-content-center">
+	<div class="col-10 col-xl-6">
+		<h2 class="text-center">About Me</h2>
+		<p>{{aboutMeContent}}</p>
+	</div>
+</div>
